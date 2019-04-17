@@ -1,0 +1,54 @@
+$colors: (
+  dodgerBluee: #005A9C,
+  dodgerGray: #A5AcAF,
+  dodgerRed: #EF3E42,
+  newGray: #F5F5F5
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+.runners-container {
+  border-style: none;
+  border-radius: 10px;
+  font-family: 'roboto';
+  width: 90%;
+  margin: 0 auto 2em;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+  background-color: color(newGray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .runners-item {
+    //justify-content: space-between;
+    padding: .5em;
+    //width: 50%;
+    //height: 100%;
+
+    h3 {
+      text-align: center;
+      color: color(dodgerBluee);
+      font-size: 1.30em;
+    }
+    .circle {
+      width: 25px;
+      height: 25px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 2px;
+    }
+    #one {
+      background-color: gray;
+    }
+    #two {
+      background-color: yellow;
+    }
+    #three {
+      background-color: gray;
+    }
+  }
+}
