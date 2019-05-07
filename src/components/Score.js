@@ -1,43 +1,39 @@
 import React, { Component } from 'react';
-//import '../styles/score.scss';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { fetchScore } from '../actions/scoreActions';
 
-export default class Score extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      homeTeamName: '',
-      homeTeamRuns: 0,
-      awayTeamName: '',
-      awayTeamRuns: 0
-    }
-  }
-
+class Score extends Component {
   componentDidMount() {
-    fetch('http://gd2.mlb.com/components/game/mlb/year_2019/month_03/day_25/gid_2019_03_26_anamlb_lanmlb_1/linescore.json')
-      .then(res => res.json())
-      .then(data => 
-        this.setState(
-          {
-            homeTeamName: data.data.game.home_team_name,
-            homeTeamRuns: data.data.game.home_team_runs,
-            awayTeamName: data.data.game.away_team_name,
-            awayTeamRuns: data.data.game.away_team_runs
-          }
-        ))
+    this.props.fetchScore();
   }
 
   render() {
     return (
       <div className="container">
         <div className="item">
-          <h3 className="home-team">{this.state.homeTeamName}</h3>
-            <p>{this.state.homeTeamRuns}</p>
+          <h3 className="home-team">{this.props.homeTeamName}</h3>
+            <p>{this.props.homeTeamRuns}</p>
         </div>
         <div className="item">
-          <h3 className="away-team">{this.state.awayTeamName}</h3>
-            <p>{this.state.awayTeamRuns}</p>
+          <h3 className="away-team">{this.props.awayTeamName}</h3>
+            <p>{this.props.awayTeamRuns}</p>
         </div> 
       </div>
     )
   }
 }
+
+// *TODO*
+// Score.propTypes = {
+//   fetchScore: PropTypes.func.isRequired,
+// }
+
+const mapStateToProps = state => ({
+  homeTeamName: state.score.homeTeamName,
+  homeTeamRuns: state.score.homeTeamRuns,
+  awayTeamName: state.score.awayTeamName,
+  awayTeamRuns: state.score.awayTeamRuns
+})
+
+export default connect(mapStateToProps, { fetchScore })(Score);

@@ -12,6 +12,14 @@ export default class Count extends Component {
       strikes: 0
     }
   }
+
+  // Going to use this to grab day's game id
+  componentDidMount() {
+    fetch('http://gd2.mlb.com/components/game/mlb/year_2019/month_04/day_17/miniscoreboard.json')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }
+
   render() {
     return (
       <div className="container">
