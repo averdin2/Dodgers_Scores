@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { fetchValues } from '../actions/gameDataActions';
 //import '../styles/count.scss';
 
-export default class Count extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inningState: 'Top',  // should default empty
-      inning: 1,           // should default 0
-      outs: 0,
-      balls: 0,
-      strikes: 0
-    }
-  }
+class Count extends Component {
 
   // Going to use this to grab day's game id
   componentDidMount() {
-    fetch('http://gd2.mlb.com/components/game/mlb/year_2019/month_04/day_17/miniscoreboard.json')
-      .then(res => res.json())
-      .then(data => console.log(data))
+    // fetch('http://gd2.mlb.com/components/game/mlb/year_2019/month_04/day_17/miniscoreboard.json')
+    //   .then(res => res.json())
+    //   .then(data => console.log(data))
+    this.props.fetchValues();
   }
 
   render() {
@@ -25,17 +19,28 @@ export default class Count extends Component {
       <div className="container">
         <div className="item">
           <h3>Inning</h3>
-            <p>{this.state.inningState}: <span>{this.state.inning}</span></p>
+            <p>{this.props.gameStatus === 'Final' ? 'Final' : this.props.inningState + ': ' + this.props.inning}</p>
         </div>
         <div className="item">
           <h3>Outs</h3>
-            <p>{this.state.outs}</p>
+            <p>{this.props.outs}</p>
         </div>
         <div className="item">
           <h3>Count</h3>
-            <p>{this.state.balls}-{this.state.strikes}</p>
+            <p>{this.props.balls}-{this.props.strikes}</p>
         </div>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  inningState: state.data.inningState,
+  inning: state.data.inning,
+  outs: state.data.outs,
+  balls: state.data.balls,
+  strikes: state.data.strikes,
+  gameStatus: state.data.gameStatus
+})
+
+export default connect(mapStateToProps, { fetchValues })(Count);

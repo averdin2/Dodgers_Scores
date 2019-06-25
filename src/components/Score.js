@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchScore } from '../actions/scoreActions';
+import { fetchValues } from '../actions/gameDataActions';
 
 class Score extends Component {
   componentDidMount() {
-    this.props.fetchScore();
+    this.props.fetchValues();
   }
 
   render() {
@@ -30,10 +30,10 @@ class Score extends Component {
 // }
 
 const mapStateToProps = state => ({
-  homeTeamName: state.score.homeTeamName,
-  homeTeamRuns: state.score.homeTeamRuns,
-  awayTeamName: state.score.awayTeamName,
-  awayTeamRuns: state.score.awayTeamRuns
+  homeTeamName: state.data.homeTeamName,
+  homeTeamRuns: state.data.homeTeamRuns,
+  awayTeamName: state.data.awayTeamName,
+  awayTeamRuns: state.data.awayTeamRuns
 })
 
-export default connect(mapStateToProps, { fetchScore })(Score);
+export default connect(mapStateToProps, { fetchValues })(Score);

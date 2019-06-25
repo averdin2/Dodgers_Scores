@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 $colors: (
   dodgerBluee: #005A9C,
   dodgerGray: #A5AcAF,
@@ -18,7 +20,7 @@ $colors: (
   .container {
     border-style: none;
     border-radius: 10px;
-    font-family: 'roboto';
+    font-family: 'Poppins', sans-serif;
     width: 90%;
     margin: 0 auto 2em;
     position: relative;
