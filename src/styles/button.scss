@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+$colors: (
+  dodgerBluee: #005a9c,
+  dodgerGray: #a5acaf,
+  dodgerRed: #ef3e42,
+  newGray: #f5f5f5,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+.btn {
+  border-style: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  width: 40%;
+  margin: 0 auto 2em;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+  background-color: color(newGray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+
+  h3 {
+    text-align: center;
+    color: color(dodgerBluee);
+    font-size: 1.3em;
+  }
+
+  p {
+    color: color(dodgerRed);
+    text-align: center;
+    font-size: 1.25em;
+  }
+}
