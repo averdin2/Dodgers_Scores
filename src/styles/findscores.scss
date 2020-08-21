@@ -11,6 +11,24 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+.updateContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+
+  .form {
+    margin: 20px 0;
+
+    .form input {
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+
 .btn {
   border-style: none;
   border-radius: 10px;
