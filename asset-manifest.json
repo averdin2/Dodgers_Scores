@@ -1,14 +1,14 @@
 {
-  "main.css": "/Dodgers_Scores/static/css/main.3446412c.chunk.css",
-  "main.js": "/Dodgers_Scores/static/js/main.10198c68.chunk.js",
-  "main.js.map": "/Dodgers_Scores/static/js/main.10198c68.chunk.js.map",
+  "main.css": "/Dodgers_Scores/static/css/main.81ed5444.chunk.css",
+  "main.js": "/Dodgers_Scores/static/js/main.b5df2648.chunk.js",
+  "main.js.map": "/Dodgers_Scores/static/js/main.b5df2648.chunk.js.map",
   "runtime~main.js": "/Dodgers_Scores/static/js/runtime~main.51e2b673.js",
   "runtime~main.js.map": "/Dodgers_Scores/static/js/runtime~main.51e2b673.js.map",
   "static/js/2.43c0e60f.chunk.js": "/Dodgers_Scores/static/js/2.43c0e60f.chunk.js",
   "static/js/2.43c0e60f.chunk.js.map": "/Dodgers_Scores/static/js/2.43c0e60f.chunk.js.map",
   "index.html": "/Dodgers_Scores/index.html",
-  "precache-manifest.e9ee37fcc6c30f88a22cc0e198e66364.js": "/Dodgers_Scores/precache-manifest.e9ee37fcc6c30f88a22cc0e198e66364.js",
+  "precache-manifest.0ac09e5f30fd071bedaefcf5c0ce30e7.js": "/Dodgers_Scores/precache-manifest.0ac09e5f30fd071bedaefcf5c0ce30e7.js",
   "service-worker.js": "/Dodgers_Scores/service-worker.js",
-  "static/css/main.3446412c.chunk.css.map": "/Dodgers_Scores/static/css/main.3446412c.chunk.css.map",
+  "static/css/main.81ed5444.chunk.css.map": "/Dodgers_Scores/static/css/main.81ed5444.chunk.css.map",
   "static/media/header.scss": "/Dodgers_Scores/static/media/Dodger Stadium Field.a7584166.jpeg"
 }

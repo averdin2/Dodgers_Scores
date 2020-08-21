@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/Dodgers_Scores/static/js/runtime~main.51e2b673.js"
   },
   {
-    "revision": "3e5bb2c66713599dfd5d",
-    "url": "/Dodgers_Scores/static/js/main.10198c68.chunk.js"
+    "revision": "5d705a12496a7946421f",
+    "url": "/Dodgers_Scores/static/js/main.b5df2648.chunk.js"
   },
   {
     "revision": "3260c58e24b9cf28544b",
     "url": "/Dodgers_Scores/static/js/2.43c0e60f.chunk.js"
   },
   {
-    "revision": "3e5bb2c66713599dfd5d",
-    "url": "/Dodgers_Scores/static/css/main.3446412c.chunk.css"
+    "revision": "5d705a12496a7946421f",
+    "url": "/Dodgers_Scores/static/css/main.81ed5444.chunk.css"
   },
   {
-    "revision": "312a576426aa0e133e93a364848b4d72",
+    "revision": "a7eb4a2b170a72dfb80563edbdd97043",
     "url": "/Dodgers_Scores/index.html"
   }
 ];

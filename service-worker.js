@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Dodgers_Scores/precache-manifest.e9ee37fcc6c30f88a22cc0e198e66364.js"
+  "/Dodgers_Scores/precache-manifest.0ac09e5f30fd071bedaefcf5c0ce30e7.js"
 );
 
 workbox.clientsClaim();
