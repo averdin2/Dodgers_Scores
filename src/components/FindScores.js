@@ -10,7 +10,8 @@ export class FindScores extends Component {
     super(props);
 
     this.state = {
-      gameLink: '',
+      gameLink:
+        'https://gd2.mlb.com/components/game/mlb/year_2020/month_08/day_20/gid_2020_08_20_lanmlb_seamlb_1/linescore.json',
     };
   }
   render() {
