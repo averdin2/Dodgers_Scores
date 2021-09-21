@@ -6,6 +6,15 @@ For more project information check the projects document folder.
 
 Live Link: https://averdin2.github.io/Dodgers_Scores/
 
+### Project Image
+<details>
+<summary>Here is an image of the working site:</summary>
+
+![image](https://user-images.githubusercontent.com/10714770/134235383-a7277938-f577-4c5b-8d8d-03506a20d8a7.png)
+</details>
+
+
+
 ### Project Notes
 
 Due to the API I was using, I could not find a way to dynamically generate game data links for a specific game so the app does not work as originally intended. I did learn a lot from this project though. I learned a lot about using React and Redux together as well as using the Fetch API to gather data. The project does work correctly if a proper game day API link is provided in the search field. Bellow are a few links to past games that will show the app working as intended.
